@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+  <modelVersion>4.0.0</modelVersion>
+	<groupId>com.tibco.mvndemo</groupId>
+	<artifactId>pkg</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	
+  <name>Maven Demo Application</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.cloud.com</url>
+	
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tibco.mvndemo</groupId>
+			<artifactId>app</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.tibco.mvndemo</groupId>
+			<artifactId>module1</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+    	<dependency>
+			<groupId>com.tibco.mvndemo</groupId>
+			<artifactId>module2</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>a0mf7zgfiyl4z-artifactory-primary-1-releases</name>
+			<url>https://csgprdusw2reposaas.jfrog.io/artifactory/tibco-be-local-maven</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>a0mf7zgfiyl4z-artifactory-primary-1-snapshots</name>
+			<url>https://csgprdusw2reposaas.jfrog.io/artifactory/tibco-be-local-maven</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

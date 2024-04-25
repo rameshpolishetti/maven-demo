@@ -28,6 +28,7 @@ replay_pid*
 
 # Maven
 target/
+libs/
 
 # JFrog
 settings.xml
