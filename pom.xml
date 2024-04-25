@@ -79,4 +79,16 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>a0mf7zgfiyl4z-artifactory-primary-1-releases</name>
+			<url>https://csgprdusw2reposaas.jfrog.io/artifactory/tibco-be-local-maven</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>a0mf7zgfiyl4z-artifactory-primary-1-snapshots</name>
+			<url>https://csgprdusw2reposaas.jfrog.io/artifactory/tibco-be-local-maven</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
