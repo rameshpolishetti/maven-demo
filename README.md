@@ -3,5 +3,5 @@
 Run
 ```
 mvn clean package
-java -cp app/target/app-1.0-SNAPSHOT.jar:module1/target/module1-1.0-SNAPSHOT.jar com.tibco.mvndemo.App
+java -cp app/target/app-1.0-SNAPSHOT.jar:module1/target/module1-1.0-SNAPSHOT.jar:module2/target/module2-1.0-SNAPSHOT.jar com.tibco.mvndemo.App
 ```

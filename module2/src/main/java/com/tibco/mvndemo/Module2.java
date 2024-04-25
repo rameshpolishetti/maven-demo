@@ -4,17 +4,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Module1 {
+public class Module2 {
     public String getVersion() {
         Properties props = new Properties();
         try {
-            InputStream inputStream = getClass().getResourceAsStream("/module1.properties");
+            InputStream inputStream = getClass().getResourceAsStream("/module2.properties");
             if (inputStream != null) {
                 props.load(inputStream);
             }
         } catch (IOException ioex) {
             ioex.printStackTrace();
         }
-        return "[Module1] " + props.getProperty("module.version");
+        return "[Module2] " + props.getProperty("module.version");
     }
 }
