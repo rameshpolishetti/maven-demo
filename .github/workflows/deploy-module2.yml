@@ -1,0 +1,24 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Deploy Module2
+
+on:
+  push:
+    paths:
+      - 'module2/**'
+
+jobs:
+  build:
+
+    runs-on:
+      labels: guwdbebuild04
+
+    steps:
+    - uses: actions/checkout@v4    
+
+    - name: Build
+      run: cd module2; /mnt/tsi/root/external/maven/3.9.6/bin/mvn install
+
+    - name: Deploy to JFrog
+      run: /mnt/tsi/root/external/maven/3.9.6/bin/mvn deploy
