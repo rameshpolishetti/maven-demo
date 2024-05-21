@@ -12,13 +12,13 @@ jobs:
   build:
 
     runs-on:
-      labels: guwdbebuild04
+      labels: macOS
 
     steps:
     - uses: actions/checkout@v4    
 
     - name: Build
-      run: cd module2; /mnt/tsi/root/external/maven/3.9.6/bin/mvn install
+      run: cd module2; mvn install
 
     - name: Deploy to JFrog
-      run: /mnt/tsi/root/external/maven/3.9.6/bin/mvn deploy
+      run: mvn deploy
