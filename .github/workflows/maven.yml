@@ -17,18 +17,14 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on:
+      labels: guwdbebuild04
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
+    
     - name: Build with Maven
-      run: mvn clean install
+      run: /mnt/tsi/root/external/maven/3.9.6/bin/mvn clean install
     
     - name: Test Run
-      run: cd pkg; mvn dependency:copy-dependencies -DoutputDirectory=libs; java -cp libs:libs/app-1.1-SNAPSHOT.jar:libs/module1-1.1-SNAPSHOT.jar:libs/module2-1.1-SNAPSHOT.jar:libs/log4j-api-2.11.2.jar:libs/log4j-core-2.11.2.jar com.tibco.mvndemo.App
+      run: cd pkg; /mnt/tsi/root/external/maven/3.9.6/bin/mvn dependency:copy-dependencies -DoutputDirectory=libs; java -cp libs:libs/app-1.1-SNAPSHOT.jar:libs/module1-1.1-SNAPSHOT.jar:libs/module2-1.1-SNAPSHOT.jar:libs/log4j-api-2.11.2.jar:libs/log4j-core-2.11.2.jar com.tibco.mvndemo.App
