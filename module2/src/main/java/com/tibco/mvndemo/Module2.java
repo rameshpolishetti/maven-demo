@@ -21,6 +21,5 @@ public class Module2 {
         String version = "Version = " + props.getProperty("module.version");
         logger.info(version);
         return version;
-        
     }
 }
